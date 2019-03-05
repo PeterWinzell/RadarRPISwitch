@@ -3,12 +3,7 @@
 <script>
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyDsw1MZMHszfuuYWgFok7s5yik9Gj40WRs",
-    authDomain: "damagereport-897b3.firebaseapp.com",
-    databaseURL: "https://damagereport-897b3.firebaseio.com",
-    projectId: "damagereport-897b3",
-    storageBucket: "damagereport-897b3.appspot.com",
-    messagingSenderId: "775418918620"
+    
   };
   firebase.initializeApp(config);
 </script>
