@@ -9,6 +9,7 @@ import fnmatch
 import os
 import json
 import _thread
+import firebase_admin
 
 from PIL import Image, ImageDraw
 
@@ -85,8 +86,10 @@ def camera_record():
             print('recording stops...')
             camera.stop_recording()
             reportfilename = "videos/" + getTimeStampedFileName()
-            if os.path.exists(reportfilename):
-                os.remove(reportfilename)
+            filename=reportfilename+".mp4"
+            print(filename)
+            if os.path.exists(filename):
+                os.remove(filename)
             else:
                 print("could not remove previous file")       
             command = "MP4Box -add {} {}.mp4".format('before.h264',reportfilename)
@@ -94,8 +97,12 @@ def camera_record():
                 output = subprocess.check_output(command,stderr=subprocess.STDOUT,shell=True)
                 camera.close() # need to save power    
             except subprocess.CalledProcessError as e:    
-                print('failed to convert to mp4') 
-     
+                print('failed to convert to mp4')
+                
+def initFirebaseConnection():
+    key = "AIzaSyDsw1MZMHszfuuYWgFok7s5yik9Gj40WRs"
+    databaseURL= "https://damagereport-897b3.firebaseio.com"
+
 def main():
     _thread.start_new_thread(on_new_client,())
         
