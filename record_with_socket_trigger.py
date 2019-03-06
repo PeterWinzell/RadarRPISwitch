@@ -11,6 +11,9 @@ import json
 import _thread
 import firebase_admin
 import RPi.GPIO as GPIO
+import firebase_admin
+from firebase_admin import credentials, firestore, storage
+
 
 from PIL import Image, ImageDraw
 
@@ -113,10 +116,28 @@ def listenforInterrupt():
         val = GPIO.input(BREAK_PIN)
     if val==1:
         sys.exit()
-    time.sleep(0.5)    
+    time.sleep(0.5)
+ 
+# connect to firebase db 
+def iniateDbConnection():
+    cred = credentials.Certificate('damagereport.json')
+
+    firebase_admin.initialize_app(cred,{
+        'storageBucket':'damagereport-897b3.appspot.com'
+    })
+    
+#upload video to cloud    
+def sendToCloud(filename):   
+    db = firestore.client()
+    bucket = storage.bucket()
+    blob = bucket.blob(filename)
+    filepath = 'videos/' + filename
+    with open(filepath,'rb') as a_file:
+        blob.upload_from_file(a_file)
 
 def main():
     setupGPIOS()
+    iniateDbConnection()
     _thread.start_new_thread(listenforInterrupt,())
     _thread.start_new_thread(on_new_client,())
     sys.exit()
