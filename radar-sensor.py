@@ -16,10 +16,7 @@ import RPi.GPIO as GPIO
 
 
 
-#set GPIO17 to recieve motion signal , set PIN to low to match sensor.
-# also set reset time to 5 seconds.
-#radar = DigitalInputDevice(17,pull_up=False,bounce_time = 5.0)
-#radar = MotionSensor(17)
+
 
 # retrive camera object
 camera = PiCamera()
@@ -67,7 +64,7 @@ def removefile(filename):
 #start key listening thread
 #thread = Thread(target = listenforbreakkey,args=[])
 
-camera.start_preview()
+#camera.start_preview()
 try:
     while (counter < 3):
         #radar.when_activated = detector
@@ -82,12 +79,12 @@ except KeyboardInterrupt:
     camera.close()
     sys.exit()
     
-camera.stop_preview()
+#camera.stop_preview()
 camera.close()
 
 
 #time.sleep(60)
-GPIO.output(5,GPIO.LOW)
+#GPIO.output(5,GPIO.LOW)
 print("shutting down...you got one minute to kill the process")
 #subprocess.call(['shutdown','-h','now'],shell=False)
     
