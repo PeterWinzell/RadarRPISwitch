@@ -12,6 +12,7 @@ import _thread
 import firebase_admin
 import RPi.GPIO as GPIO
 import firebase_admin
+import sys
 from firebase_admin import credentials, firestore, storage
 
 
@@ -33,8 +34,11 @@ MAX_MP4_FILES = 0           # the maximum number of files we are allowed to stor
 BREAK_PIN = 6                # interrupt script, to be able to turn the script off while in a shut down wake loop. Just pinch a cable hooked up to BREAK_PIN
 SHUT_PIN  = 5                # Set this pin to low when we want the pi to turn off power.
 
+SHUTDOWN = True              # flag that lets us interrupt shutdown process. Just pinch the male GPIO SHUT_PIN.
 
 def setupGPIOS():
+    global BREAK_PIN
+    global SHUT_PIN
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(BREAK_PIN,GPIO.IN)
     GPIO.setup(SHUT_PIN,GPIO.OUT)
@@ -69,12 +73,18 @@ def removeOldestFile():
     if (numFiles() + 1) > MAX_MP4_FILES:
         files = fnmatch.filter(os.listdir("videos/"),"*.mp4")
         for mp4file in files:
-            print (mp4file)
+            print ('removing: ' + mp4file)
             os.remove("videos/"+mp4file)
 
 #new connections handled as separate threads
 def on_new_client():
+        global SHUTDOWN
         camera_record()
+        if SHUTDOWN == False:
+            print(' shutdown process canceled by user ')
+            sys.exit()
+        else:
+            start_pi_shutdown()
 
 #tag recorded file with incident stamp
 def tag_file():
@@ -106,17 +116,24 @@ def camera_record():
             command = "MP4Box -add {} {}.mp4".format('before.h264',reportfilename)
             try:
                 output = subprocess.check_output(command,stderr=subprocess.STDOUT,shell=True)
-                camera.close() # need to save power    
+                camera.close() # need to save power
+                sendToCloud(reportfilename+".mp4")
             except subprocess.CalledProcessError as e:    
                 print('failed to convert to mp4')
-
+            
 
 def listenforInterrupt():
-    while True:
-        val = GPIO.input(BREAK_PIN)
-    if val==1:
-        sys.exit()
-    time.sleep(0.5)
+    global SHUTDOWN
+    try:
+        while SHUTDOWN == True:
+            val = GPIO.input(BREAK_PIN)
+            if val==1:
+                print(' breaking shutdown sequence...')
+                SHUTDOWN = False
+                break
+            time.sleep(0.5)
+    except Exception as e: print(e)
+    
  
 # connect to firebase db 
 def iniateDbConnection():
@@ -130,17 +147,25 @@ def iniateDbConnection():
 def sendToCloud(filename):   
     db = firestore.client()
     bucket = storage.bucket()
-    blob = bucket.blob(filename)
-    filepath = 'videos/' + filename
+    line = filename
+    _,_,blobname = line.partition("/")
+    blob = bucket.blob(blobname)
+    filepath = filename
     with open(filepath,'rb') as a_file:
         blob.upload_from_file(a_file)
 
+# setting 
+def start_pi_shutdown():
+    print(' shutting down pi ... ')
+    GPIO.output(SHUT_PIN,GPIO.LOW)
+    subprocess.call(['shutdown','-h','now'],shell=False)
+    
 def main():
     setupGPIOS()
     iniateDbConnection()
     _thread.start_new_thread(listenforInterrupt,())
     _thread.start_new_thread(on_new_client,())
-    sys.exit()
+    
         
 if __name__ == '__main__':
     main()
