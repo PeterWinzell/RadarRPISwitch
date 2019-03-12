@@ -13,6 +13,8 @@ import firebase_admin
 import RPi.GPIO as GPIO
 import firebase_admin
 import sys
+import logging
+
 from firebase_admin import credentials, firestore, storage
 
 
@@ -36,6 +38,8 @@ SHUT_PIN  = 5                # Set this pin to low when we want the pi to turn o
 
 SHUTDOWN = True              # flag that lets us interrupt shutdown process. Just pinch the male GPIO SHUT_PIN.
 
+MAIN_DIR = "/home/pi/radar-sensor/RadarRPISwitch/"
+
 def setupGPIOS():
     global BREAK_PIN
     global SHUT_PIN
@@ -47,7 +51,7 @@ def setupGPIOS():
 def write_before(stream):
     # Write the entire content of the circular buffer to disk. No need to lock
     # the stream here as we're definitely not writing to it simultaneously
-    with io.open('before.h264', 'wb') as output:
+    with io.open(MAIN_DIR + 'before.h264', 'wb') as output:
         for frame in stream.frames:
             if frame.header:
                 stream.seek(frame.position)
@@ -66,20 +70,24 @@ def getTimeStampedFileName():
     #return "motion-detected"
 
 def numFiles():
-    return len(fnmatch.filter(os.listdir("videos/"),"*.mp4"))
+    return len(fnmatch.filter(os.listdir(MAIN_DIR + "videos/"),"*.mp4"))
 
 # remove all previous mp4 files 
 def removeOldestFile():
     if (numFiles() + 1) > MAX_MP4_FILES:
-        files = fnmatch.filter(os.listdir("videos/"),"*.mp4")
+        files = fnmatch.filter(os.listdir(MAIN_DIR+"videos/"),"*.mp4")
         for mp4file in files:
             print ('removing: ' + mp4file)
-            os.remove("videos/"+mp4file)
+            os.remove(MAIN_DIR +"videos/"+mp4file)
 
 #new connections handled as separate threads
 def on_new_client():
-        global SHUTDOWN
-        camera_record()
+        #global SHUTDOWN
+        try:
+            camera_record()
+        except  Exception as e:
+            print(e)
+       
         if SHUTDOWN == False:
             print(' shutdown process canceled by user ')
             sys.exit()
@@ -92,10 +100,12 @@ def tag_file():
     
 #record 10s video and store in videos/
 def camera_record():
+    print("mupp")
     with picamera.PiCamera() as camera: # only start camera when we need it.
-        camera.resolution = (1280, 720)
+        camera.resolution = (800, 600)
         stream = picamera.PiCameraCircularIO(camera, seconds=10)
         #motion_detector = MotionDetector(camera)
+        camera.start_preview()
         camera.start_recording(stream, format='h264', bitrate=REC_BITRATE,
                 intra_period=REC_FRAMERATE)
         print('recording starting...')
@@ -103,24 +113,24 @@ def camera_record():
             while True:
                 ##camera.split_recording('after.h264')
                 time.sleep(10);
-                camera.split_recording('after.h264')
+                camera.split_recording(MAIN_DIR+'after.h264')
                 write_before(stream)
                 break
         finally:
             print('recording stops...')
             camera.stop_recording()
-            reportfilename = "videos/" + getTimeStampedFileName()
+            reportfilename = MAIN_DIR + "videos/" + getTimeStampedFileName()
             filename=reportfilename+".mp4"
             print(filename)
             removeOldestFile()     
-            command = "MP4Box -add {} {}.mp4".format('before.h264',reportfilename)
+            command = "MP4Box -add {} {}.mp4".format(MAIN_DIR +'before.h264',reportfilename)
             try:
                 output = subprocess.check_output(command,stderr=subprocess.STDOUT,shell=True)
                 camera.close() # need to save power
                 sendToCloud(reportfilename+".mp4")
             except subprocess.CalledProcessError as e:    
                 print('failed to convert to mp4')
-            
+            camera.stop_preview()
 
 def listenforInterrupt():
     global SHUTDOWN
@@ -137,7 +147,7 @@ def listenforInterrupt():
  
 # connect to firebase db 
 def iniateDbConnection():
-    cred = credentials.Certificate('damagereport.json')
+    cred = credentials.Certificate(MAIN_DIR+'damagereport.json')
 
     firebase_admin.initialize_app(cred,{
         'storageBucket':'damagereport-897b3.appspot.com'
@@ -148,7 +158,7 @@ def sendToCloud(filename):
     db = firestore.client()
     bucket = storage.bucket()
     line = filename
-    _,_,blobname = line.partition("/")
+    _,_,blobname = line.partition("videos/")
     blob = bucket.blob(blobname)
     filepath = filename
     with open(filepath,'rb') as a_file:
@@ -159,13 +169,18 @@ def start_pi_shutdown():
     print(' shutting down pi ... ')
     GPIO.output(SHUT_PIN,GPIO.LOW)
     subprocess.call(['shutdown','-h','now'],shell=False)
+
+def handle_exception(exc_type, exc_value, exc_traceback):
+    print(join(traceback.format_exception(exc_type,exc_value,exc_traceback)))
+    #sys.exit(1)
     
 def main():
+    sys.excepthook = handle_exception
     setupGPIOS()
     iniateDbConnection()
     _thread.start_new_thread(listenforInterrupt,())
-    _thread.start_new_thread(on_new_client,())
-    
+    #_thread.start_new_thread(on_new_client,())
+    on_new_client()
         
 if __name__ == '__main__':
     main()

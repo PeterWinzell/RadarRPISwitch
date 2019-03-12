@@ -12,7 +12,7 @@ from threading import Thread
 from picamera import PiCamera
 from signal import pause
 import RPi.GPIO as GPIO
-
+from connection import has_internetconnection
 
 
 
