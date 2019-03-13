@@ -15,7 +15,7 @@ import firebase_admin
 import sys
 import logging
 from connection import has_internetconnection
-from firebase_admin import credentials, firestore, storage, db
+from firebase_admin import credentials, firestore, storage
 from PIL import Image, ImageDraw
 
 prior_image = None
@@ -31,13 +31,13 @@ MOTION_VECTORS = 10          # the number of vectors required to detect motion
 
 MAX_MP4_FILES = 0           # the maximum number of files we are allowed to store
                     
+BREAK_PIN = 6                # interrupt script, to be able to turn the script off while in a shut down wake loop. Just pinch a cable hooked up to BREAK_PIN
 SHUT_PIN  = 5                # Set this pin to low when we want the pi to turn off power.
 
+SHUTDOWN = True              # flag that lets us interrupt shutdown process. Just pinch the male GPIO SHUT_PIN.
 
 MAIN_DIR = "/home/pi/radar-sensor/RadarRPISwitch/"
 logger = logging.getLogger('report_gen_logger')
-
-SHUTDOWN = True
 
 def setupLogging():   
     logger.setLevel(logging.DEBUG)
@@ -53,8 +53,10 @@ def setupLogging():
     
 def setupGPIOS():
     logger.info('setting up GPIO pins setupGPIOS()')
+    global BREAK_PIN
     global SHUT_PIN
     GPIO.setmode(GPIO.BCM)
+    GPIO.setup(BREAK_PIN,GPIO.IN)
     GPIO.setup(SHUT_PIN,GPIO.OUT)
     GPIO.output(SHUT_PIN,GPIO.HIGH)
 
@@ -98,7 +100,8 @@ def on_new_client():
         try:
             camera_record()
         except  Exception as e:
-            logger.debug(str(e) + ' on_new_client()')
+            logger.debug(e + ' on_new_client()')
+       
         if SHUTDOWN == False:
             logger.debug(' shutdown process canceled by user on_new_client()')
             sys.exit()
@@ -176,20 +179,21 @@ def sendToCloud(filename):
     filepath = filename
     logger.debug('filepath is: ' + filepath + ' sendToCloud()')
     with open(filepath,'rb') as a_file:
-        blob.upload_from_file(a_file)    
-    logger.debug("video access URL is: " + blob.public_url + " sendToCloud(filename) ")
-
-   
-    #root = db.reference()
-    #root.child('damagereport').push({
-    #    'url':blob.public_url
-    #})
+        blob.upload_from_file(a_file)
+        
+    lder = "damagereport"
+    db.reference().child('damagereport').push()({
+        'url':blob.public_url
+    })
     
+    logger.debug("video access URL is: " + blob.public_url + " sendToCloud(filename) ")
+    logger.debug(" internal link " + blob.selfLink)
+        
 # setting 
 def start_pi_shutdown():
     logger.debug(' shutting down pi ... start_pi_shutdown()')
-    GPIO.output(SHUT_PIN,GPIO.LOW)
-    subprocess.call(['shutdown','-h','now'],shell=False)
+    #GPIO.output(SHUT_PIN,GPIO.LOW)
+    #subprocess.call(['shutdown','-h','now'],shell=False)
 
 def handle_exception(exc_type, exc_value, exc_traceback):
     logger.debug(" ".join(traceback.format_exception(exc_type,exc_value,exc_traceback)))
