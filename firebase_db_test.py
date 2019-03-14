@@ -43,7 +43,7 @@ def uploadBlobFile(filename):
         # let the files be public available
         blob.make_public()
         print("url : " + blob.public_url )
-
+...
 
 
 def writeURLtoDB():
