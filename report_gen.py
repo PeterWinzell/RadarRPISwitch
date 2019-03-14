@@ -12,7 +12,7 @@ import _thread
 import firebase_admin
 import RPi.GPIO as GPIO
 import firebase_admin
-import sys
+import sys,traceback
 import logging
 from connection import has_internetconnection
 from firebase_admin import credentials, firestore, storage, db
@@ -162,8 +162,16 @@ def iniateDbConnection():
     cred = credentials.Certificate(MAIN_DIR+'damagereport.json')
     logger.debug('cred iniateDbConnection()')
     firebase_admin.initialize_app(cred,{
-        'storageBucket':'damagereport-897b3.appspot.com'
+        'storageBucket':'damagereport-897b3.appspot.com',
+        'databaseURL':'https://damagereport-897b3.firebaseio.com'
     })
+
+def addUrlToDB(urlstr):
+    root = db.reference()
+    new_url = root.child('damagereports').push({
+        'url':urlstr
+    })
+    logger.debug(urlstr + ' added to db')
     
 #upload video to cloud    
 def sendToCloud(filename):   
@@ -178,7 +186,7 @@ def sendToCloud(filename):
     with open(filepath,'rb') as a_file:
         blob.upload_from_file(a_file)    
     logger.debug("video access URL is: " + blob.public_url + " sendToCloud(filename) ")
-
+    #addUrlToDB(blob.public_url)
    
     #root = db.reference()
     #root.child('damagereport').push({
