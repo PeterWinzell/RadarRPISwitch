@@ -17,12 +17,14 @@ class FirebaseDbUtility:
                 'uid': 'qLlrevFUUPhKuVwx7O3hUFRsdUx2'}
         })
 
+    # add a public url to resource such as mp4
     def writeurltodb(self, urlstr):
         root = db.reference()
         root.child('damagereports').push({
             'url': urlstr
         })
 
+    # uploads a blob(video,photo) to firebase
     def uploadBlob(self,filename,partitionstr):
         db = firestore.client()
         bucket = storage.bucket()
