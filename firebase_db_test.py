@@ -29,7 +29,7 @@ def writeURLtoDB():
         'url':urlstr
     })
     
-
+def copy
     
 def main():
     iniateDbConnection2()
