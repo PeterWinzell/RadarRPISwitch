@@ -10,9 +10,6 @@ __pycache__/
 *.mp4
 *.h264
 
-#firebase cred file
-damagereport.json
-
 # Distribution / packaging
 .Python
 build/

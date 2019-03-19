@@ -1,7 +1,10 @@
-import firebase_admin
-from firebase_admin import credentials, firestore, storage, db
+import firebase_admin, os, sys
+from firebase_admin import credentials, firestore, storage, db, auth
+from dbutil import FirebaseDbUtility
 
-MAIN_DIR = "/home/pi/radar-sensor/RadarRPISwitch/"
+# get current directory
+MAIN_DIR, _ = os.path.split(os.path.abspath(__file__))
+PARTITION_NAME = "pics/" # should be added through
 
 # connect to firebase db 
 def iniateDbConnection2():
@@ -28,13 +31,14 @@ def writeURLtoDB():
     new_url = root.child('damagereports').push({
         'url':urlstr
     })
-    
-def copy
+
     
 def main():
-    iniateDbConnection2()
-    writeURLtoDB()
+    # initialize database
+    dbutil = FirebaseDbUtility("/damagereport.json", MAIN_DIR)
+    # upload file to firebase
+    dbutil.uploadBlob('pics/pic0.jpg', "/pics")
+
 
 if __name__ == '__main__':
     main()
-    
