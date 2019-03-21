@@ -104,11 +104,12 @@ def on_new_client(db):
         except  Exception as e:
             #errstr = traceback.format_exc()
             logger.debug(str(e) + ' on_new_client()')
-        if SHUTDOWN == False:
-            logger.debug(' shutdown process canceled by user on_new_client()')
-            sys.exit()
-        else:
-            start_pi_shutdown()
+        finally:    
+            if SHUTDOWN == False:
+                logger.debug(' shutdown process canceled by user on_new_client()')
+                sys.exit()
+            else:
+                start_pi_shutdown()
 
 #tag recorded file with incident stamp
 #def tag_file():
@@ -122,7 +123,7 @@ def camera_record(db):
         camera.resolution = (800, 600)
         stream = picamera.PiCameraCircularIO(camera, seconds=10)
         #motion_detector = MotionDetector(camera)
-        camera.start_preview()
+        #camera.start_preview()
         camera.start_recording(stream, format='h264', bitrate=REC_BITRATE,
                 intra_period=REC_FRAMERATE)
         logger.debug('recording starting... camera_record() format h264 800x600')
@@ -130,27 +131,29 @@ def camera_record(db):
             while True:
                 ##camera.split_recording('after.h264')
                 time.sleep(10);
-                camera.split_recording(MAIN_DIR+'after.h264')
+                camera.split_recording(MAIN_DIR + 'after.h264')
                 write_before(stream)
                 break
+        except Exception as e:
+            logger.debug(' camera loop error ' + str(e))
         finally:
+            
             logger.debug('recording stops...camera_record()')
             camera.stop_recording()
-            reportfilename = MAIN_DIR + "videos/" + stringutils.gettimestampedfilename()
-            filename=reportfilename + FILE_EXT
-            logger.debug('report filename is ' + filename + ' camera_record()')
-            stringutils.removeoldestfiles(MAX_MP4_FILES)
+            #camera.stop_preview()
+            camera.close()
+            logger.debug('camera closed...camera_record()')
             
-            command = "MP4Box -add {} {}.mp4".format(MAIN_DIR +'before.h264',reportfilename)
-            try:
-                logger.debug('converting to mp4 camera_record()')
-                output = subprocess.check_output(command,stderr=subprocess.STDOUT,shell=True)
-                camera.stop_preview()
-                camera.close() # need to save power
-                #sendToCloud(reportfilename+".mp4")
-                db.uploadblob(reportfilename + FILE_EXT, "videos/")
-            except subprocess.CalledProcessError as e:    
-                logger.debug('failed to convert to mp4 camera_record()')
+        reportfilename = MAIN_DIR + "videos/" + stringutils.gettimestampedfilename()
+        filename=reportfilename + FILE_EXT
+        logger.debug('report filename is ' + filename + ' camera_record()')
+        stringutils.removeoldestfiles(MAX_MP4_FILES)
+            
+        command = "MP4Box -add {} {}.mp4".format(MAIN_DIR +'before.h264',reportfilename)
+        logger.debug('converting to mp4 camera_record()')
+        output = subprocess.check_output(command,stderr=subprocess.STDOUT,shell=True)
+        db.uploadblob(reportfilename + FILE_EXT, "videos/")
+            
             
 
 #def listenforInterrupt():
