@@ -1,4 +1,4 @@
-# version 0.0.1 Peter Winzell jan 2019
+ # version 0.0.1 Peter Winzell jan 2019
 import io
 import picamera
 import time
@@ -18,6 +18,9 @@ from connection import has_internetconnection
 from firebase_admin import credentials, firestore, storage, db
 from PIL import Image, ImageDraw
 
+from dbutil import FirebaseDbUtility
+from stringutils import StringFileUtils
+
 prior_image = None
 camera = None
 
@@ -35,6 +38,7 @@ SHUT_PIN  = 5                # Set this pin to low when we want the pi to turn o
 
 
 MAIN_DIR = "/home/pi/radar-sensor/RadarRPISwitch/"
+FILE_EXT = ".mp4"
 logger = logging.getLogger('report_gen_logger')
 
 SHUTDOWN = True
@@ -76,28 +80,29 @@ def write_before(stream):
     stream.seek(0)
     stream.truncate()
 
-def getTimeStampedFileName():
-    logger.info('creating filename getTimeStampedFileName()')
-    return time.strftime("report%Y%m%d-%H%M%S")
+#def getTimeStampedFileName():
+#    logger.info('creating filename getTimeStampedFileName()')
+#    return time.strftime("report%Y%m%d-%H%M%S")
     #return "motion-detected"
 
-def numFiles():
-    return len(fnmatch.filter(os.listdir(MAIN_DIR + "videos/"),"*.mp4"))
+#def numFiles():
+#   return len(fnmatch.filter(os.listdir(MAIN_DIR + "videos/"),"*.mp4"))
 
 # remove all previous mp4 files 
-def removeOldestFile():
-    if (numFiles() + 1) > MAX_MP4_FILES:
-        files = fnmatch.filter(os.listdir(MAIN_DIR+"videos/"),"*.mp4")
-        for mp4file in files:
-            logger.debug('removing: ' + mp4file + ' removeOldestFile()')
-            os.remove(MAIN_DIR +"videos/"+mp4file)
+#def removeOldestFile():
+#    if (numFiles() + 1) > MAX_MP4_FILES:
+#        files = fnmatch.filter(os.listdir(MAIN_DIR+"videos/"),"*.mp4")
+#        for mp4file in files:
+#            logger.debug('removing: ' + mp4file + ' removeOldestFile()')
+#            os.remove(MAIN_DIR +"videos/"+mp4file)
 
 #new connections handled as separate threads
-def on_new_client():
+def on_new_client(db):
         #global SHUTDOWN
         try:
-            camera_record()
+            camera_record(db)
         except  Exception as e:
+            #errstr = traceback.format_exc()
             logger.debug(str(e) + ' on_new_client()')
         if SHUTDOWN == False:
             logger.debug(' shutdown process canceled by user on_new_client()')
@@ -106,11 +111,13 @@ def on_new_client():
             start_pi_shutdown()
 
 #tag recorded file with incident stamp
-def tag_file():
-    logger.info("not implemented yet tag_file()")
+#def tag_file():
+#    logger.info("not implemented yet tag_file()")
     
 #record 10s video and store in videos/
-def camera_record():
+def camera_record(db):
+    stringutils = StringFileUtils(logger, MAIN_DIR + "/videos", FILE_EXT)
+    logger.info(' accessing camera')
     with picamera.PiCamera() as camera: # only start camera when we need it.
         camera.resolution = (800, 600)
         stream = picamera.PiCameraCircularIO(camera, seconds=10)
@@ -129,92 +136,95 @@ def camera_record():
         finally:
             logger.debug('recording stops...camera_record()')
             camera.stop_recording()
-            reportfilename = MAIN_DIR + "videos/" + getTimeStampedFileName()
-            filename=reportfilename+".mp4"
-            logger.debug('report filename is ' + filename + 'camera_record()')
-            removeOldestFile()     
+            reportfilename = MAIN_DIR + "videos/" + stringutils.gettimestampedfilename()
+            filename=reportfilename + FILE_EXT
+            logger.debug('report filename is ' + filename + ' camera_record()')
+            stringutils.removeoldestfiles(MAX_MP4_FILES)
+            
             command = "MP4Box -add {} {}.mp4".format(MAIN_DIR +'before.h264',reportfilename)
             try:
                 logger.debug('converting to mp4 camera_record()')
                 output = subprocess.check_output(command,stderr=subprocess.STDOUT,shell=True)
                 camera.stop_preview()
                 camera.close() # need to save power
-                sendToCloud(reportfilename+".mp4")
+                #sendToCloud(reportfilename+".mp4")
+                db.uploadblob(reportfilename + FILE_EXT, "videos/")
             except subprocess.CalledProcessError as e:    
                 logger.debug('failed to convert to mp4 camera_record()')
             
 
-def listenforInterrupt():
-    global SHUTDOWN
-    try:
-        while SHUTDOWN == True:
-            val = GPIO.input(BREAK_PIN)
-            if val==1:
-                print(' breaking shutdown sequence...')
-                SHUTDOWN = False
-                break
-            time.sleep(0.5)
-    except Exception as e: print(e)
+#def listenforInterrupt():
+#    global SHUTDOWN
+#    try:
+#        while SHUTDOWN == True:
+#            val = GPIO.input(BREAK_PIN)
+#            if val==1:
+#                print(' breaking shutdown sequence...')
+#                SHUTDOWN = False
+#                break
+#            time.sleep(0.5)
+#    except Exception as e: print(e)
     
  
 # connect to firebase db 
-def iniateDbConnection():
-    cred = credentials.Certificate(MAIN_DIR+'damagereport.json')
-    logger.debug('cred iniateDbConnection()')
-    firebase_admin.initialize_app(cred,{
-        'storageBucket':'damagereport-897b3.appspot.com',
-        'databaseURL':'https://damagereport-897b3.firebaseio.com'
-    })
+#def iniateDbConnection():
+#    cred = credentials.Certificate(MAIN_DIR+'damagereport.json')
+#    logger.debug('cred iniateDbConnection()')
+#    firebase_admin.initialize_app(cred,{
+#        'storageBucket':'damagereport-897b3.appspot.com',
+#        'databaseURL':'https://damagereport-897b3.firebaseio.com'
+#    })
 
-def addUrlToDB(urlstr):
-    root = db.reference()
-    new_url = root.child('damagereports').push({
-        'url':urlstr
-    })
-    logger.debug(urlstr + ' added to db')
+#def addUrlToDB(urlstr):
+#    root = db.reference()
+#    new_url = root.child('damagereports').push({
+#        'url':urlstr
+#    })
+#    logger.debug(urlstr + ' added to db')
     
 #upload video to cloud    
-def sendToCloud(filename):   
-    db = firestore.client()
-    bucket = storage.bucket()
-    line = filename
-    _,_,blobname = line.partition("videos/")
-    logger.debug('blobname is '+ blobname + ' sendToCloud()')
-    blob = bucket.blob(blobname)
-    filepath = filename
-    logger.debug('filepath is: ' + filepath + ' sendToCloud()')
-    with open(filepath,'rb') as a_file:
-        blob.upload_from_file(a_file)    
-    logger.debug("video access URL is: " + blob.public_url + " sendToCloud(filename) ")
-    #addUrlToDB(blob.public_url)
+#def sendToCloud(filename):   
+#    db = firestore.client()
+#    bucket = storage.bucket()
+#    line = filename
+#    _,_,blobname = line.partition("videos/")
+#    logger.debug('blobname is '+ blobname + ' sendToCloud()')
+#    blob = bucket.blob(blobname)
+#    filepath = filename
+#    logger.debug('filepath is: ' + filepath + ' sendToCloud()')
+#    with open(filepath,'rb') as a_file:
+#        blob.upload_from_file(a_file)    
+#    logger.debug("video access URL is: " + blob.public_url + " sendToCloud(filename) ")
+#    #addUrlToDB(blob.public_url)
    
     #root = db.reference()
     #root.child('damagereport').push({
     #    'url':blob.public_url
     #})
     
-# setting 
+# setting  
 def start_pi_shutdown():
-    logger.debug(' shutting down pi ... start_pi_shutdown()')
+    logger.debug(' stop cycle ******')
     GPIO.output(SHUT_PIN,GPIO.LOW)
     subprocess.call(['shutdown','-h','now'],shell=False)
 
 def handle_exception(exc_type, exc_value, exc_traceback):
-    logger.debug(" ".join(traceback.format_exception(exc_type,exc_value,exc_traceback)))
+    logger.debug(str.join( "exception: ", traceback.format_exception(exc_type,exc_value,exc_traceback )))
     #sys.exit(1)
     
 def main():
     setupLogging()
     sys.excepthook = handle_exception
+    logger.info('start cycle ***** ')
     if has_internetconnection(logger) == False:
         SHUTDOWN = False
         logger.debug("exiting script no internet connection main()")
         sys.exit()
     setupGPIOS()
-    iniateDbConnection()
+    db = FirebaseDbUtility("damagereport.json",MAIN_DIR, logger)
     #_thread.start_new_thread(listenforInterrupt,())
     #_thread.start_new_thread(on_new_client,())
-    on_new_client()
+    on_new_client(db)
         
 if __name__ == '__main__':
     main()

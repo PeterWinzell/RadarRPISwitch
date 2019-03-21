@@ -7,8 +7,10 @@ class FirebaseDbUtility:
     """Handles the upload of video files to firebase damagereport-897b3"""
     cred = None
     app = None
-
-    def __init__(self, credfilename,main_dir):
+    logger = None
+    
+    def __init__(self, credfilename, main_dir,  log):
+        self.logger = log
         self.cred = credentials.Certificate(main_dir + credfilename)
         self.app = firebase_admin.initialize_app(self.cred, {
             'storageBucket': 'damagereport-897b3.appspot.com',
@@ -25,14 +27,14 @@ class FirebaseDbUtility:
         })
 
     # uploads a blob(video,photo) to firebase
-    def uploadBlob(self,filename,partitionstr):
+    def uploadblob(self,filename,partitionstr):
         db = firestore.client()
         bucket = storage.bucket()
         line = filename
         _, _, blobname = line.partition(partitionstr)
 
         blob = bucket.blob("damagereport/" + blobname)
-        print("Blob path is : " + blob.path)
+        self.logger.info("Blob path is : " + blob.path)
         filepath = filename
 
         # blob.make_public()
@@ -41,6 +43,6 @@ class FirebaseDbUtility:
 
         # let the files be public available
         blob.make_public()
-        print("url : " + blob.public_url)
+        self.logger.info("url : " + blob.public_url)
         urlstr = blob.public_url
         self.writeurltodb(urlstr)

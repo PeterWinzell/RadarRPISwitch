@@ -1,0 +1,657 @@
+2019-03-19 16:09:15,880 - report_gen_logger - DEBUG - <urllib3.connection.HTTPConnection object at 0x746a8890>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+2019-03-19 16:09:15,881 - report_gen_logger - DEBUG - not connected to the internet
+2019-03-19 16:09:15,882 - report_gen_logger - DEBUG - exiting script no internet connection main()
+2019-03-19 16:11:34,698 - report_gen_logger - DEBUG - <urllib3.connection.HTTPConnection object at 0x74676810>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+2019-03-19 16:11:34,699 - report_gen_logger - DEBUG - not connected to the internet
+2019-03-19 16:11:34,700 - report_gen_logger - DEBUG - exiting script no internet connection main()
+2019-03-19 16:14:33,019 - report_gen_logger - DEBUG - <urllib3.connection.HTTPConnection object at 0x746d2930>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+2019-03-19 16:14:33,020 - report_gen_logger - DEBUG - not connected to the internet
+2019-03-19 16:14:33,021 - report_gen_logger - DEBUG - exiting script no internet connection main()
+2019-03-19 16:14:51,108 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 16:14:51,110 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 16:14:51,138 - report_gen_logger - DEBUG - 'Logger' object is not callable on_new_client()
+2019-03-19 16:14:51,138 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 16:25:15,697 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 16:25:15,699 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 16:25:15,709 - report_gen_logger - DEBUG - 'Logger' object is not callable on_new_client()
+2019-03-19 16:25:15,710 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 16:41:25,442 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 16:41:25,444 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 16:41:25,452 - report_gen_logger - DEBUG - 'Logger' object is not callable on_new_client()
+2019-03-19 16:41:25,453 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 16:43:09,635 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 16:43:09,637 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 16:43:09,645 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 16:43:09,647 - report_gen_logger - INFO -  accessing camera
+2019-03-19 16:43:10,773 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 16:43:20,806 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 16:43:20,871 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 16:43:20,881 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 16:43:20,885 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-164320*.mp4camera_record()
+2019-03-19 16:43:20,929 - report_gen_logger - DEBUG - removeoldestfiles() takes 1 positional argument but 2 were given on_new_client()
+2019-03-19 16:43:20,930 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 16:45:50,846 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 16:45:50,848 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 16:45:50,856 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 16:45:50,858 - report_gen_logger - INFO -  accessing camera
+2019-03-19 16:45:51,260 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 16:46:01,287 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 16:46:01,357 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 16:46:01,368 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 16:46:01,374 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-164601*.mp4 camera_record()
+2019-03-19 16:46:01,378 - report_gen_logger - DEBUG - removing: report20190314-135623.mp4 removeoldestfiles()
+2019-03-19 16:46:01,755 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 16:46:02,180 - report_gen_logger - DEBUG - [Errno 2] No such file or directory: '/home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-164601*.mp4' on_new_client()
+2019-03-19 16:46:02,181 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 16:50:36,514 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 16:50:36,516 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 16:50:36,523 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 16:50:36,526 - report_gen_logger - INFO -  accessing camera
+2019-03-19 16:50:36,957 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 16:50:47,000 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 16:50:47,062 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 16:50:47,073 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 16:50:47,076 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-165047.mp4 camera_record()
+2019-03-19 16:50:47,079 - report_gen_logger - DEBUG - removing: report20190319-164601.mp4 removeoldestfiles()
+2019-03-19 16:50:47,083 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 16:50:51,319 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:00:53,821 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:00:53,823 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:00:53,833 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:00:53,838 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:00:54,232 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:01:04,295 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:01:04,360 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:01:04,371 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:01:04,374 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-170104.mp4 camera_record()
+2019-03-19 17:01:04,377 - report_gen_logger - DEBUG - removing: report20190319-165047.mp4 removeoldestfiles()
+2019-03-19 17:01:04,380 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:01:08,635 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:01:41,762 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:01:41,766 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:01:41,777 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:01:41,778 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:01:42,872 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:01:52,913 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:01:52,966 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:01:52,985 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:01:52,986 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-170152.mp4 camera_record()
+2019-03-19 17:01:52,989 - report_gen_logger - DEBUG - removing: report20190319-170104.mp4 removeoldestfiles()
+2019-03-19 17:01:52,990 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:01:57,250 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:03:00,960 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:03:00,964 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:03:00,975 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:03:00,976 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:03:02,064 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:03:12,103 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:03:12,156 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:03:12,178 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:03:12,179 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-170312.mp4 camera_record()
+2019-03-19 17:03:12,181 - report_gen_logger - DEBUG - removing: report20190319-170152.mp4 removeoldestfiles()
+2019-03-19 17:03:12,183 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:03:16,589 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:05:16,434 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:05:16,438 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:05:16,449 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:05:16,450 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:05:17,548 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:05:27,582 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:05:27,637 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:05:27,651 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:05:27,652 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-170527.mp4 camera_record()
+2019-03-19 17:05:27,763 - report_gen_logger - DEBUG - removing: report20190319-170312.mp4 removeoldestfiles()
+2019-03-19 17:05:27,768 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:06:11,843 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:06:45,739 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:06:45,743 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:06:45,761 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:06:45,763 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:06:46,852 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:06:56,892 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:06:56,946 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:06:56,961 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:06:56,962 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-170656.mp4 camera_record()
+2019-03-19 17:06:56,965 - report_gen_logger - DEBUG - removing: report20190319-170527.mp4 removeoldestfiles()
+2019-03-19 17:06:56,966 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:07:01,095 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:08:05,864 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:08:05,868 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:08:05,879 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:08:05,880 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:08:06,967 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:08:17,008 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:08:17,062 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:08:17,082 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:08:17,084 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-170817.mp4 camera_record()
+2019-03-19 17:08:17,086 - report_gen_logger - DEBUG - removing: report20190319-170656.mp4 removeoldestfiles()
+2019-03-19 17:08:17,087 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:08:21,278 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:11:11,178 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:11:11,182 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:11:11,193 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:11:11,194 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:11:12,284 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:11:22,325 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:11:22,380 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:11:22,484 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:11:22,485 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-171122.mp4 camera_record()
+2019-03-19 17:11:22,513 - report_gen_logger - DEBUG - removing: report20190319-170817.mp4 removeoldestfiles()
+2019-03-19 17:11:22,516 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:11:26,849 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:12:01,009 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:12:01,013 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:12:01,024 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:12:01,025 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:12:02,122 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:12:12,161 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:12:12,214 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:12:12,235 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:12:12,236 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-171212.mp4 camera_record()
+2019-03-19 17:12:12,239 - report_gen_logger - DEBUG - removing: report20190319-171122.mp4 removeoldestfiles()
+2019-03-19 17:12:12,240 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:12:16,591 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:13:43,608 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:13:43,612 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:13:43,623 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:13:43,625 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:13:44,715 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:13:54,755 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:13:54,810 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:13:54,824 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:13:54,825 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-171354.mp4 camera_record()
+2019-03-19 17:13:54,827 - report_gen_logger - DEBUG - removing: report20190319-171212.mp4 removeoldestfiles()
+2019-03-19 17:13:54,829 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:15:35,914 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:16:09,849 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:16:09,853 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:16:09,864 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:16:09,865 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:16:10,959 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:16:21,000 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:16:21,053 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:16:21,072 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:16:21,073 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-171621.mp4 camera_record()
+2019-03-19 17:16:21,076 - report_gen_logger - DEBUG - removing: report20190319-171354.mp4 removeoldestfiles()
+2019-03-19 17:16:21,077 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:16:25,429 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:17:30,188 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:17:30,193 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:17:30,204 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:17:30,205 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:17:31,293 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:17:41,334 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:17:41,387 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:17:41,659 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:17:41,660 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-171741.mp4 camera_record()
+2019-03-19 17:17:41,677 - report_gen_logger - DEBUG - removing: report20190319-171621.mp4 removeoldestfiles()
+2019-03-19 17:17:41,681 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:18:23,748 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:18:44,253 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:18:44,259 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:18:44,270 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:18:44,272 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:18:45,370 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:18:55,412 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:18:55,466 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:18:55,590 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:18:55,592 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-171855.mp4 camera_record()
+2019-03-19 17:18:55,598 - report_gen_logger - DEBUG - removing: report20190319-171741.mp4 removeoldestfiles()
+2019-03-19 17:18:55,602 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:18:59,524 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:20:08,662 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:20:08,666 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:20:08,677 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:20:08,679 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:20:09,777 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:20:19,810 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:20:19,865 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:20:19,878 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:20:19,880 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-172019.mp4 camera_record()
+2019-03-19 17:20:19,882 - report_gen_logger - DEBUG - removing: report20190319-171855.mp4 removeoldestfiles()
+2019-03-19 17:20:19,884 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:21:02,012 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:21:36,017 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:21:36,032 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:21:36,043 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:21:36,044 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:21:37,140 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:21:47,174 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:21:47,230 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:21:47,243 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:21:47,244 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-172147.mp4 camera_record()
+2019-03-19 17:21:47,246 - report_gen_logger - DEBUG - removing: report20190319-172019.mp4 removeoldestfiles()
+2019-03-19 17:21:47,248 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:21:51,792 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:23:08,822 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:23:08,826 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:23:08,837 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:23:08,838 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:23:09,943 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:23:19,977 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:23:20,032 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:23:20,046 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:23:20,047 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-172320.mp4 camera_record()
+2019-03-19 17:23:20,050 - report_gen_logger - DEBUG - removing: report20190319-172147.mp4 removeoldestfiles()
+2019-03-19 17:23:20,051 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:23:24,516 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:24:39,650 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:24:39,654 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:24:39,665 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:24:39,666 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:24:40,758 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:24:50,797 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:24:50,852 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:24:50,866 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:24:50,867 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-172450.mp4 camera_record()
+2019-03-19 17:24:50,870 - report_gen_logger - DEBUG - removing: report20190319-172320.mp4 removeoldestfiles()
+2019-03-19 17:24:50,871 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:24:55,104 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:25:58,780 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:25:58,784 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:25:58,795 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:25:58,796 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:25:59,893 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:26:09,934 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:26:09,987 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:26:10,006 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:26:10,007 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-172610.mp4 camera_record()
+2019-03-19 17:26:10,010 - report_gen_logger - DEBUG - removing: report20190319-172450.mp4 removeoldestfiles()
+2019-03-19 17:26:10,011 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:26:14,125 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:27:37,527 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:27:37,531 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:27:37,542 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:27:37,543 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:27:38,631 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:27:48,672 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:27:48,726 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:27:48,741 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:27:48,742 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-172748.mp4 camera_record()
+2019-03-19 17:27:48,745 - report_gen_logger - DEBUG - removing: report20190319-172610.mp4 removeoldestfiles()
+2019-03-19 17:27:48,746 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:27:53,359 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:28:57,758 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:28:57,772 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:28:57,784 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:28:57,785 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:28:58,875 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:29:08,915 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:29:08,969 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:29:08,984 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:29:08,985 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-172908.mp4 camera_record()
+2019-03-19 17:29:08,987 - report_gen_logger - DEBUG - removing: report20190319-172748.mp4 removeoldestfiles()
+2019-03-19 17:29:08,989 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:29:13,125 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:30:37,642 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:30:37,646 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:30:37,657 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:30:37,658 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:30:38,747 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:30:48,788 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:30:48,841 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:30:48,855 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:30:48,856 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-173048.mp4 camera_record()
+2019-03-19 17:30:48,859 - report_gen_logger - DEBUG - removing: report20190319-172908.mp4 removeoldestfiles()
+2019-03-19 17:30:48,860 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:30:53,210 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:32:56,826 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:32:56,830 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:32:56,848 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:32:56,849 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:32:57,939 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:33:07,978 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:33:08,033 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:33:08,046 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:33:08,048 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-173308.mp4 camera_record()
+2019-03-19 17:33:08,050 - report_gen_logger - DEBUG - removing: report20190319-173048.mp4 removeoldestfiles()
+2019-03-19 17:33:08,051 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:33:12,418 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:34:33,815 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:34:33,819 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:34:33,844 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:34:33,845 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:34:34,937 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:34:44,977 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:34:45,032 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:34:45,045 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:34:45,046 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-173445.mp4 camera_record()
+2019-03-19 17:34:45,049 - report_gen_logger - DEBUG - removing: report20190319-173308.mp4 removeoldestfiles()
+2019-03-19 17:34:45,050 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:34:49,125 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:36:00,566 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:36:00,570 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:36:00,581 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:36:00,582 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:36:01,669 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:36:11,710 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:36:11,763 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:36:11,782 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:36:11,783 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-173611.mp4 camera_record()
+2019-03-19 17:36:11,786 - report_gen_logger - DEBUG - removing: report20190319-173445.mp4 removeoldestfiles()
+2019-03-19 17:36:11,787 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:36:15,984 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:37:09,353 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:37:09,358 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:37:09,369 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:37:09,370 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:37:10,459 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:37:20,502 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:37:20,555 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:37:20,678 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:37:20,680 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-173720.mp4 camera_record()
+2019-03-19 17:37:20,686 - report_gen_logger - DEBUG - removing: report20190319-173611.mp4 removeoldestfiles()
+2019-03-19 17:37:20,690 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:37:24,988 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:38:20,398 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:38:20,403 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:38:20,414 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:38:20,415 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:38:21,504 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:38:31,544 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:38:31,598 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:38:31,921 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:38:31,922 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-173831.mp4 camera_record()
+2019-03-19 17:38:31,950 - report_gen_logger - DEBUG - removing: report20190319-173720.mp4 removeoldestfiles()
+2019-03-19 17:38:31,955 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:39:47,953 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:40:22,004 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:40:22,022 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:40:22,033 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:40:22,035 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:40:23,124 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:40:33,163 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:40:33,217 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:40:33,238 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:40:33,240 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-174033.mp4 camera_record()
+2019-03-19 17:40:33,242 - report_gen_logger - DEBUG - removing: report20190319-173831.mp4 removeoldestfiles()
+2019-03-19 17:40:33,243 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:40:37,469 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:41:51,102 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:41:51,107 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:41:51,118 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:41:51,119 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:41:52,207 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:42:02,248 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:42:02,301 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:42:02,320 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:42:02,321 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-174202.mp4 camera_record()
+2019-03-19 17:42:02,324 - report_gen_logger - DEBUG - removing: report20190319-174033.mp4 removeoldestfiles()
+2019-03-19 17:42:02,325 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:42:06,518 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:43:07,364 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:43:07,370 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:43:07,381 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:43:07,382 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:43:08,472 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:43:18,513 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:43:18,569 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:43:18,582 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:43:18,583 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-174318.mp4 camera_record()
+2019-03-19 17:43:18,697 - report_gen_logger - DEBUG - removing: report20190319-174202.mp4 removeoldestfiles()
+2019-03-19 17:43:18,701 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:44:01,244 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:44:21,601 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:44:21,606 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:44:21,618 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:44:21,619 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:44:22,708 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:44:32,748 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:44:32,801 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:44:32,820 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:44:32,821 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-174432.mp4 camera_record()
+2019-03-19 17:44:32,927 - report_gen_logger - DEBUG - removing: report20190319-174318.mp4 removeoldestfiles()
+2019-03-19 17:44:32,931 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:45:21,832 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:45:42,079 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:45:42,084 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:45:42,095 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:45:42,097 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:45:43,191 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:45:53,232 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:45:53,284 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:45:53,304 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:45:53,305 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-174553.mp4 camera_record()
+2019-03-19 17:45:53,410 - report_gen_logger - DEBUG - removing: report20190319-174432.mp4 removeoldestfiles()
+2019-03-19 17:45:53,414 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:45:57,598 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:47:27,458 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:47:27,463 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:47:27,474 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:47:27,475 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:47:28,568 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:47:38,608 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:47:38,663 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:47:38,676 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:47:38,678 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-174738.mp4 camera_record()
+2019-03-19 17:47:38,680 - report_gen_logger - DEBUG - removing: report20190319-174553.mp4 removeoldestfiles()
+2019-03-19 17:47:38,682 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:47:43,297 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:52:29,630 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:52:29,634 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:52:29,646 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:52:29,647 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:52:30,734 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:52:40,775 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:52:40,831 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:52:40,844 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:52:40,845 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-175240.mp4 camera_record()
+2019-03-19 17:52:40,848 - report_gen_logger - DEBUG - removing: report20190319-174738.mp4 removeoldestfiles()
+2019-03-19 17:52:40,849 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:52:45,050 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:53:35,463 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:53:35,468 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:53:35,479 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:53:35,481 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:53:36,571 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:53:46,612 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:53:46,666 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:53:46,680 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:53:46,681 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-175346.mp4 camera_record()
+2019-03-19 17:53:46,764 - report_gen_logger - DEBUG - removing: report20190319-175240.mp4 removeoldestfiles()
+2019-03-19 17:53:46,794 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:55:02,460 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:55:36,087 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:55:36,091 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:55:36,102 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:55:36,103 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:55:37,197 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:55:47,238 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:55:47,291 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:55:47,306 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:55:47,308 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-175547.mp4 camera_record()
+2019-03-19 17:55:47,310 - report_gen_logger - DEBUG - removing: report20190319-175346.mp4 removeoldestfiles()
+2019-03-19 17:55:47,311 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:55:51,751 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 17:57:34,168 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 17:57:34,172 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 17:57:34,183 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 17:57:34,184 - report_gen_logger - INFO -  accessing camera
+2019-03-19 17:57:35,280 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 17:57:45,314 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 17:57:45,369 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 17:57:45,382 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 17:57:45,384 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-175745.mp4 camera_record()
+2019-03-19 17:57:45,386 - report_gen_logger - DEBUG - removing: report20190319-175547.mp4 removeoldestfiles()
+2019-03-19 17:57:45,387 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 17:57:49,634 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 18:00:41,500 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 18:00:41,504 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 18:00:41,515 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 18:00:41,516 - report_gen_logger - INFO -  accessing camera
+2019-03-19 18:00:42,604 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 18:00:52,645 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 18:00:52,700 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 18:00:52,713 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 18:00:52,715 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-180052.mp4 camera_record()
+2019-03-19 18:00:52,717 - report_gen_logger - DEBUG - removing: report20190319-175745.mp4 removeoldestfiles()
+2019-03-19 18:00:52,718 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 18:00:57,120 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 18:03:05,827 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 18:03:05,831 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 18:03:05,842 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 18:03:05,843 - report_gen_logger - INFO -  accessing camera
+2019-03-19 18:03:06,933 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 18:03:16,974 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 18:03:17,031 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 18:03:17,042 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 18:03:17,043 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-180317.mp4 camera_record()
+2019-03-19 18:03:17,046 - report_gen_logger - DEBUG - removing: report20190319-180052.mp4 removeoldestfiles()
+2019-03-19 18:03:17,047 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 18:03:21,508 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 18:15:45,750 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 18:15:45,753 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 18:15:45,765 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 18:15:45,766 - report_gen_logger - INFO -  accessing camera
+2019-03-19 18:15:46,854 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 18:15:56,893 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 18:15:56,947 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 18:15:56,963 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 18:15:56,964 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-181556.mp4 camera_record()
+2019-03-19 18:15:56,966 - report_gen_logger - DEBUG - removing: report20190319-180317.mp4 removeoldestfiles()
+2019-03-19 18:15:56,968 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 18:16:01,246 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 18:58:04,924 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 18:58:04,928 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 18:58:04,940 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 18:58:04,941 - report_gen_logger - INFO -  accessing camera
+2019-03-19 18:58:06,028 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 18:58:16,068 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 18:58:16,123 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 18:58:16,137 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 18:58:16,138 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-185816.mp4 camera_record()
+2019-03-19 18:58:16,141 - report_gen_logger - DEBUG - removing: report20190319-181556.mp4 removeoldestfiles()
+2019-03-19 18:58:16,142 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 18:58:20,520 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 19:11:05,735 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 19:11:05,739 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 19:11:05,750 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 19:11:05,751 - report_gen_logger - INFO -  accessing camera
+2019-03-19 19:11:06,839 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 19:11:16,879 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 19:11:16,932 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 19:11:16,947 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 19:11:16,948 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-191116.mp4 camera_record()
+2019-03-19 19:11:16,951 - report_gen_logger - DEBUG - removing: report20190319-185816.mp4 removeoldestfiles()
+2019-03-19 19:11:16,952 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 19:11:21,334 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 19:12:41,762 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 19:12:41,766 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 19:12:41,784 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 19:12:41,785 - report_gen_logger - INFO -  accessing camera
+2019-03-19 19:12:42,890 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 19:12:52,926 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 19:12:52,981 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 19:12:52,992 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 19:12:52,994 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-191252.mp4 camera_record()
+2019-03-19 19:12:52,996 - report_gen_logger - DEBUG - removing: report20190319-191116.mp4 removeoldestfiles()
+2019-03-19 19:12:52,998 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 19:12:57,901 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 19:59:31,786 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 19:59:31,790 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 19:59:31,801 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 19:59:31,803 - report_gen_logger - INFO -  accessing camera
+2019-03-19 19:59:32,893 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 19:59:42,933 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 19:59:42,988 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 19:59:43,002 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 19:59:43,003 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-195943.mp4 camera_record()
+2019-03-19 19:59:43,006 - report_gen_logger - DEBUG - removing: report20190319-191252.mp4 removeoldestfiles()
+2019-03-19 19:59:43,007 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 19:59:44,716 - report_gen_logger - DEBUG - ('invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems.', '{\n  "error": "invalid_grant",\n  "error_description": "Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems."\n}') on_new_client()
+2019-03-19 19:59:44,718 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 20:00:18,733 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 20:00:18,738 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 20:00:18,749 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 20:00:18,750 - report_gen_logger - INFO -  accessing camera
+2019-03-19 20:00:19,839 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 20:00:29,878 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 20:00:29,930 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 20:00:29,950 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 20:00:29,952 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-200029.mp4 camera_record()
+2019-03-19 20:00:29,954 - report_gen_logger - DEBUG - removing: report20190319-195943.mp4 removeoldestfiles()
+2019-03-19 20:00:29,956 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 20:00:31,733 - report_gen_logger - DEBUG - ('invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems.', '{\n  "error": "invalid_grant",\n  "error_description": "Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems."\n}') on_new_client()
+2019-03-19 20:00:31,734 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-19 20:00:55,403 - report_gen_logger - DEBUG - connected to the internet
+2019-03-19 20:00:55,409 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-19 20:00:55,420 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-19 20:00:55,421 - report_gen_logger - INFO -  accessing camera
+2019-03-19 20:00:56,510 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-19 20:01:06,551 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-19 20:01:06,608 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-19 20:01:06,620 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-19 20:01:06,621 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190319-200106.mp4 camera_record()
+2019-03-19 20:01:06,734 - report_gen_logger - DEBUG - removing: report20190319-200029.mp4 removeoldestfiles()
+2019-03-19 20:01:06,738 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-19 20:01:08,163 - report_gen_logger - DEBUG - ('invalid_grant: Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems.', '{\n  "error": "invalid_grant",\n  "error_description": "Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems."\n}') on_new_client()
+2019-03-19 20:01:08,164 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-20 08:39:44,235 - report_gen_logger - DEBUG - connected to the internet
+2019-03-20 08:39:44,239 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-20 08:39:44,250 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-20 08:39:44,251 - report_gen_logger - INFO -  accessing camera
+2019-03-20 08:39:45,349 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-20 08:39:55,383 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-20 08:39:55,440 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-20 08:39:55,451 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-20 08:39:55,452 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190320-083955.mp4 camera_record()
+2019-03-20 08:39:55,455 - report_gen_logger - DEBUG - removing: report20190319-200106.mp4 removeoldestfiles()
+2019-03-20 08:39:55,456 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-20 08:40:51,797 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-20 08:41:26,091 - report_gen_logger - DEBUG - connected to the internet
+2019-03-20 08:41:26,096 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-20 08:41:26,107 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-20 08:41:26,108 - report_gen_logger - INFO -  accessing camera
+2019-03-20 08:41:27,206 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-20 08:41:37,246 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-20 08:41:37,302 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-20 08:41:37,315 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-20 08:41:37,316 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190320-084137.mp4 camera_record()
+2019-03-20 08:41:37,319 - report_gen_logger - DEBUG - removing: report20190320-083955.mp4 removeoldestfiles()
+2019-03-20 08:41:37,320 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-20 08:41:41,643 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-20 08:44:11,893 - report_gen_logger - DEBUG - connected to the internet
+2019-03-20 08:44:11,899 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-20 08:44:11,910 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-20 08:44:11,911 - report_gen_logger - INFO -  accessing camera
+2019-03-20 08:44:13,001 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-20 08:44:23,041 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-20 08:44:23,096 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-20 08:44:23,110 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-20 08:44:23,112 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190320-084423.mp4 camera_record()
+2019-03-20 08:44:23,193 - report_gen_logger - DEBUG - removing: report20190320-084137.mp4 removeoldestfiles()
+2019-03-20 08:44:23,230 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-20 09:00:24,454 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-20 09:00:57,991 - report_gen_logger - DEBUG - <urllib3.connection.HTTPConnection object at 0x746660d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+2019-03-20 09:00:57,995 - report_gen_logger - DEBUG - not connected to the internet
+2019-03-20 09:00:58,002 - report_gen_logger - DEBUG - exiting script no internet connection main()
+2019-03-20 12:45:23,266 - report_gen_logger - DEBUG - connected to the internet
+2019-03-20 12:45:23,269 - report_gen_logger - INFO - setting up GPIO pins setupGPIOS()
+2019-03-20 12:45:23,281 - report_gen_logger - INFO - initializing StringFileUtils instance
+2019-03-20 12:45:23,283 - report_gen_logger - INFO -  accessing camera
+2019-03-20 12:45:24,398 - report_gen_logger - DEBUG - recording starting... camera_record() format h264 800x600
+2019-03-20 12:45:34,431 - report_gen_logger - INFO - writing buffer to stream write_before(stream)
+2019-03-20 12:45:34,490 - report_gen_logger - DEBUG - recording stops...camera_record()
+2019-03-20 12:45:34,500 - report_gen_logger - INFO - creating filename getTimeStampedFileName() in StringUtils
+2019-03-20 12:45:34,503 - report_gen_logger - DEBUG - report filename is /home/pi/radar-sensor/RadarRPISwitch/videos/report20190320-124534.mp4 camera_record()
+2019-03-20 12:45:34,507 - report_gen_logger - DEBUG - removing: report20190320-084423.mp4 removeoldestfiles()
+2019-03-20 12:45:34,508 - report_gen_logger - DEBUG - converting to mp4 camera_record()
+2019-03-20 12:45:35,026 - report_gen_logger - DEBUG - Traceback (most recent call last):
+  File "/home/pi/radar-sensor/RadarRPISwitch/report_gen.py", line 103, in on_new_client
+    camera_record(db)
+  File "/home/pi/radar-sensor/RadarRPISwitch/report_gen.py", line 151, in camera_record
+    db.uploadblob(reportfilename + FILE_EXT, "videos/")
+  File "/home/pi/radar-sensor/RadarRPISwitch/dbutil.py", line 37, in uploadblob
+    logger.info("Blob path is : " + blob.path)
+NameError: name 'logger' is not defined
+name 'logger' is not defined on_new_client()
+2019-03-20 12:45:35,027 - report_gen_logger - DEBUG -  shutting down pi ... start_pi_shutdown()
+2019-03-20 12:45:54,708 - report_gen_logger - DEBUG - <urllib3.connection.HTTPConnection object at 0x745d1350>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+2019-03-20 12:45:54,712 - report_gen_logger - DEBUG - not connected to the internet
+2019-03-20 12:45:54,713 - report_gen_logger - DEBUG - exiting script no internet connection main()
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         2019-03-20 14:38:04,244 - report_gen_logger - DEBUG - <urllib3.connection.HTTPConnection object at 0x7461e330>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+2019-03-20 14:38:04,247 - report_gen_logger - DEBUG - not connected to the internet
+2019-03-20 14:38:04,248 - report_gen_logger - DEBUG - exiting script no internet connection main()
+2019-03-21 07:17:18,904 - report_gen_logger - DEBUG - <urllib3.connection.HTTPConnection object at 0x7461b190>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+2019-03-21 07:17:18,909 - report_gen_logger - DEBUG - not connected to the internet
+2019-03-21 07:17:18,910 - report_gen_logger - DEBUG - exiting script no internet connection main()
